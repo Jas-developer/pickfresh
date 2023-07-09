@@ -36,12 +36,14 @@ export const SaleSection = ({ title, say }) => {
   return (
     <section>
       <div className="grid md:grid-cols-3 bg-black mt-4 rounded-lg">
-        <div className="grid-item col-span-2 ">
-          <div className="flex flex-col py-3  p-4 rounded-lg">
+        <div className="grid-item col-span-2 gap-4">
+          <div className="flex flex-col py-3  p-4 rounded-lg ">
             <span className="text-orange-500 lg:text-3xl text-xl font-bold ">
               {title}
             </span>
-            <span className="text-white lg:text-lg font-semibold">{say}</span>
+            <span className="text-white lg:text-lg text-sm md:text-base md:font-medium lg:font-semibold">
+              {say}
+            </span>
           </div>
         </div>
         <div className="grid-item text-white  col-span-1">
@@ -75,19 +77,19 @@ export const SaleProducts = ({ season }) => {
                 className=" p-1 h-full w-full scale-100 transform object-cover transition duration-1000 ease-out hover:scale-110 z-[-1]"
               />
             </a>
-            <div className="flex flex-col ">
-              <span className="md:font-bold font-semibold z-[99] flex justify-center text-orange-500">
+            <div className="flex flex-col gap-2 ">
+              <span className="md:font-bold font-medium  text-sm z-[99] flex justify-center text-orange-500">
                 {product.name}
               </span>
               <a href="">
-                <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex gap-2 justify-center">
-                  ${product.price}
+                <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex flex-col md:flex-row  md:text-start text-center gap-2 justify-center">
+                  <span> ${product.price}</span>
                   <button
                     type="submit"
                     className="text-white text-sm  font-semibold bg-orange-500 transition duration-300 hover:rounded-md"
                     value={product.id}
                   >
-                    <span className="mx-2 ">BUY NOW</span>
+                    <span className="mx-2 text-sm ">BUY NOW</span>
                   </button>
                 </span>
               </a>
@@ -117,19 +119,19 @@ export const JustForYou = ({ say }) => {
                   className=" p-1 h-full w-full scale-100 transform object-cover transition duration-1000 ease-out hover:scale-110 z-[-1]"
                 />
               </a>
-              <div className="flex flex-col ">
-                <span className="md:font-bold font-semibold z-[99] flex justify-center text-orange-500">
+              <div className="flex flex-col gap-2 ">
+                <span className="md:font-bold font-medium  text-sm z-[99] flex justify-center text-orange-500">
                   {product.name}
                 </span>
                 <a href="">
-                  <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex gap-2 justify-center">
-                    ${product.price}
+                  <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex flex-col md:flex-row  md:text-start text-center gap-2 justify-center">
+                    <span> ${product.price}</span>
                     <button
                       type="submit"
                       className="text-white text-sm  font-semibold bg-orange-500 transition duration-300 hover:rounded-md"
                       value={product.id}
                     >
-                      <span className="mx-2 ">BUY NOW</span>
+                      <span className="md:mx-2  text-sm ">BUY NOW</span>
                     </button>
                   </span>
                 </a>
