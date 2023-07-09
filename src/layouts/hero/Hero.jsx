@@ -4,7 +4,7 @@ export const HeroSection = ({ say }) => {
   return (
     <>
       <div className="grid md:grid-cols-2 ">
-        <div className="grid-item flex flex-col justify-center lg:p-2 order-2 md:order-1">
+        <div className="grid-item flex flex-col justify-center p-4 lg:p-2 order-2 md:order-1">
           <div className="flex flex-col gap-3">
             <span className="font-bold text-orange-500 md:text-4xl lg:text-6xl text-2xl flex flex-row gap-2 cursor-pointer">
               PICKFRESH
