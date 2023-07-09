@@ -1,5 +1,6 @@
 import {
   JustForYou,
+  LoadMore,
   SaleProducts,
   SaleSection,
   Smile,
@@ -17,12 +18,13 @@ export const MainLayout = () => {
           one-of-a-kind arrangement using the freshiest seasonal flowers
           available."
         />
-        <SaleProducts season=" SEASONAL FLOWERS .." />
+        <SaleProducts season=" SEASONAL FLOWERS" />
         <Smile
           text="BRIGHTEN UP HER SMILE"
           say="  Say it with flowers: The perfect way to show you care."
         />
         <JustForYou say="JUST FOR YOU" />
+        <LoadMore />
       </div>
     </section>
   );

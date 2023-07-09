@@ -8,7 +8,7 @@ export const HeroSection = ({ say }) => {
           <div className="flex flex-col gap-3">
             <span className="font-bold text-orange-500 md:text-4xl lg:text-6xl text-2xl flex flex-row gap-2 cursor-pointer">
               PICKFRESH
-              <span className="md:text-xl lg:text-2xl text-lg text-green-400 underline cursor-pointer">
+              <span className="md:text-xl lg:text-2xl text-lg text-green-400  cursor-pointer">
                 <a href="">FLOWERSHOP</a>
               </span>
             </span>
