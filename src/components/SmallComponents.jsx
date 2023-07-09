@@ -1,29 +1,29 @@
 import { products } from "../layouts/hero/image";
 
-export const Smile = () => {
+export const Smile = ({ text, say }) => {
   return (
     <section>
       <div className="grid grid-cols-1 mt-12 py-4">
-        <div className="grid-item flex flex-col gap-2 bg-gray-700 p-4">
+        <div className="grid-item flex flex-col gap-2 bg-black p-4">
           <span className="md:text-3xl text-2xl lg:text-4xl font-bold text-orange-500">
-            BRIGHTEN UP HER SMILE
+            {text}
           </span>
-          <span className="font-semibold lg:text-2xl text-white">
-            Say it with flowers: The perfect way to show you care.
-          </span>
+          <span className="font-semibold lg:text-2xl text-white">{say}</span>
         </div>
       </div>
     </section>
   );
 };
 
+//
+
 // BRIGHTEN UP HER SMILE SECTION
-export const JustForYou = () => {
+export const JustForYou = ({ say }) => {
   return (
     <section>
       <div className="flex flex-col">
         <span className="md:text-4xl text-2xl font-semibold py-3 mt-5 text-orange-500 text-center cursor-pointer">
-          Just For You
+          {say}
         </span>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 ">
           {products.map((product) => (

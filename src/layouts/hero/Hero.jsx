@@ -1,6 +1,6 @@
 import { HeroImage } from "./image";
 // parent padding is p-4
-export const HeroSection = () => {
+export const HeroSection = ({ say }) => {
   return (
     <>
       <div className="grid md:grid-cols-2 ">
@@ -12,9 +12,7 @@ export const HeroSection = () => {
                 FLOWERSHOP
               </span>
             </span>
-            <span className="text-2xl md:text-3xl font-semibold">
-              The freshiest choice for love ones.
-            </span>
+            <span className="text-2xl md:text-3xl font-semibold">{say}</span>
             <span>
               <button className="bg-orange-400 p-2 transition-all duration-500  shadow-2xl hover:rounded-lg ">
                 <a href="">
