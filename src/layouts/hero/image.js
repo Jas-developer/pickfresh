@@ -68,9 +68,33 @@ export const products = [
 
 export const sale = [
   {
-    name: "",
-    link: "",
+    name: "Be Happy",
+    link: "https://img.teleflora.com/images/o_0/l_flowers:T43-1A,pg_6/w_272,h_340,cs_no_cmyk,c_pad,g_south/f_auto,q_auto:eco,e_sharpen:200/flowers/T43-1A/Teleflora'sBeHappy%C2%AEBouquetwithRoses",
     id: 11,
     price: 88,
+  },
+  {
+    name: "Garden Wellness",
+    link: "https://img.teleflora.com/images/o_0/l_flowers:TEV53-1C,pg_6/w_368,h_460,cs_no_cmyk,c_pad/f_jpg,q_auto:eco,e_sharpen:200/flowers/TEV53-1C/Teleflora'sGardenOfWellnessBouquetPM",
+    id: 12,
+    price: 72,
+  },
+  {
+    name: "Enchanted Cottage",
+    link: "https://img.teleflora.com/images/o_0/l_flowers:T50-1C,pg_6/w_368,h_460,cs_no_cmyk,c_pad/f_jpg,q_auto:eco,e_sharpen:200/flowers/T50-1C/Teleflora'sEnchantedCottagePM",
+    id: 13,
+    price: 65,
+  },
+  {
+    name: "Storybook Garden",
+    link: "https://img.teleflora.com/images/o_0/l_flowers:TEV64-5A,pg_6/w_368,h_460,cs_no_cmyk,c_pad/f_jpg,q_auto:eco,e_sharpen:200/flowers/TEV64-5A/Teleflora'sStorybookGardenBouquet",
+    id: 14,
+    price: 48,
+  },
+  {
+    name: "Silver Splendor",
+    link: "https://img.teleflora.com/images/o_0/l_flowers:TEV65-7C,pg_6/w_368,h_460,cs_no_cmyk,c_pad/f_jpg,q_auto:eco,e_sharpen:200/flowers/TEV65-7C/Teleflora'sSilverSplendorBouquetPM",
+    id: 15,
+    price: 43,
   },
 ];
