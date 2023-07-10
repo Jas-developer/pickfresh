@@ -1,5 +1,3 @@
-const icons = [{}];
-
 export const Footer = () => {
   return (
     <section className=" bg-gray-200">
@@ -17,7 +15,7 @@ export const Footer = () => {
               type="email"
               placeholder="Enter email address"
               name="email"
-              className=" px-6 lg:px-10 p-2 rounded-lg"
+              className=" px-4 lg:px-10 p-2 rounded-lg"
             />
             <input
               type="submit"
