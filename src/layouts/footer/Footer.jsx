@@ -17,12 +17,12 @@ export const Footer = () => {
               type="email"
               placeholder="Enter email address"
               name="email"
-              className="px-10 p-2 rounded-lg"
+              className=" px-6 lg:px-10 p-2 rounded-lg"
             />
             <input
               type="submit"
               value="Go"
-              className="bg-orange-400 px-6 rounded-lg"
+              className="bg-orange-400 px-3 md:px-6 rounded-lg"
             />
           </form>
         </div>
