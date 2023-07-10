@@ -50,7 +50,7 @@ export const SaleSection = ({ title, say }) => {
           <div className="flex py-3 md:justify-end justify-start p-4">
             <a href="">
               <button className=" md:mt-12 lg:mx-10 bg-orange-400 p-1 md:p-2 transition-all duration-500 hover:rounded-lg hover:scale-105">
-                <b className="mx-4">Order now</b>
+                <b className="mx-4">Order Now</b>
               </button>
             </a>
           </div>
