@@ -71,6 +71,7 @@ export const sale = [
     name: "Be Happy",
     link: "https://img.teleflora.com/images/o_0/l_flowers:T43-1A,pg_6/w_272,h_340,cs_no_cmyk,c_pad,g_south/f_auto,q_auto:eco,e_sharpen:200/flowers/T43-1A/Teleflora'sBeHappy%C2%AEBouquetwithRoses",
     id: 11,
+    href: "buyinfo",
     price: 88,
   },
   {

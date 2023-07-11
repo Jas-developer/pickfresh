@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { products, sale } from "../layouts/hero/image";
+import { Link } from "react-router-dom";
 
 // LOAD MORE BUTTON
 export const LoadMore = () => {
@@ -62,41 +64,53 @@ export const SaleSection = ({ title, say }) => {
 
 // SALE PRODUCTS SECTION
 export const SaleProducts = ({ season }) => {
+  const [value, setValue] = useState({});
+
+  const handleValue = (id, link) => {
+    setValue({ id, link });
+  };
+
   return (
     <section className="mt-6">
-      <span className="text-orange-400 px-4 lg:text-3xl md:text-2xl text-xl font-bold  mt-12">
+      <span className="text-orange-400 px-4 lg:text-3xl md:text-2xl text-xl font-bold mt-12">
         {season}
       </span>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-6">
         {sale.map((product) => (
-          <div className="flex flex-col    p-4 hover:rounded-xl hover:shadow-xl transition duration-500 ease-in-out">
-            <a href="">
-              <img
-                src={product.link}
-                alt=""
-                className=" p-1 h-full w-full scale-100 transform object-cover transition duration-1000 ease-out hover:scale-110 z-[-1]"
-              />
-            </a>
-            <div className="flex flex-col gap-2 ">
-              <span className="md:font-bold font-medium  text-sm z-[99] flex justify-center text-orange-500">
+          <div
+            key={product.id}
+            className="flex flex-col p-4 hover:rounded-xl hover:shadow-xl transition duration-500 ease-in-out"
+          >
+            <img
+              src={product.link}
+              alt=""
+              className="p-1 h-full w-full scale-100 transform object-cover transition duration-1000 ease-out hover:scale-110 z-[-1]"
+            />
+            <div className="flex flex-col gap-2">
+              <span className="md:font-bold font-medium text-sm z-[99] flex justify-center text-orange-500">
                 {product.name}
               </span>
-              <a href="">
-                <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex flex-col md:flex-row  md:text-start text-center gap-2 justify-center">
-                  <span> ${product.price}</span>
-                  <button
-                    type="submit"
-                    className="text-white text-sm  font-semibold bg-orange-500 transition duration-300 hover:rounded-md"
-                    value={product.id}
-                  >
-                    <span className="mx-2 text-sm ">BUY NOW</span>
-                  </button>
-                </span>
-              </a>
+              <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex flex-col md:flex-row md:text-start text-center gap-2 justify-center">
+                <span>${product.price}</span>
+                <button
+                  type="button"
+                  className="text-white text-sm font-semibold bg-orange-500 transition duration-300 hover:rounded-md"
+                  onClick={() => handleValue(product.id, product.link)}
+                >
+                  <span className="mx-2 text-sm">BUY NOW</span>
+                </button>
+              </span>
             </div>
           </div>
         ))}
       </div>
+      {value.id && (
+        <div>
+          <p>Selected Product ID: {value.id}</p>
+
+          <img src={value.link} />
+        </div>
+      )}
     </section>
   );
 };
@@ -112,18 +126,18 @@ export const JustForYou = ({ say }) => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 ">
           {products.map((product) => (
             <div className="flex flex-col    p-4 hover:rounded-xl hover:shadow-xl transition duration-500 ease-in-out">
-              <a href="">
+              <Link to="info">
                 <img
                   src={product.link}
                   alt=""
                   className=" p-1 h-full w-full scale-100 transform object-cover transition duration-1000 ease-out hover:scale-110 z-[-1]"
                 />
-              </a>
+              </Link>
               <div className="flex flex-col gap-2 ">
                 <span className="md:font-bold font-medium  text-sm z-[99] flex justify-center text-orange-500">
                   {product.name}
                 </span>
-                <a href="">
+                <Link to="info">
                   <span className="text-black transition-all hover:scale-110 duration-500 cursor-pointer flex flex-col md:flex-row  md:text-start text-center gap-2 justify-center">
                     <span> ${product.price}</span>
                     <button
@@ -134,7 +148,7 @@ export const JustForYou = ({ say }) => {
                       <span className="md:mx-2  text-sm ">BUY NOW</span>
                     </button>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
