@@ -3,7 +3,7 @@ export const HeroImage = {
   link: "./images/a.png",
 };
 
-export const products = [
+export const Flowers = [
   {
     name: "Mid Mood",
     link: "https://img.teleflora.com/images/o_0/l_flowers:TEV58-7A,pg_6/w_272,h_340,cs_no_cmyk,c_pad,g_south/f_auto,q_auto:eco,e_sharpen:200/flowers/TEV58-7A/Teleflora'sMidModBrightsBouquet",
@@ -64,9 +64,6 @@ export const products = [
     id: 10,
     price: 90,
   },
-];
-
-export const sale = [
   {
     name: "Be Happy",
     link: "https://img.teleflora.com/images/o_0/l_flowers:T43-1A,pg_6/w_272,h_340,cs_no_cmyk,c_pad,g_south/f_auto,q_auto:eco,e_sharpen:200/flowers/T43-1A/Teleflora'sBeHappy%C2%AEBouquetwithRoses",

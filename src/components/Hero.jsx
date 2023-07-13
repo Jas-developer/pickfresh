@@ -1,6 +1,5 @@
-import { HeroImage } from "./image";
-// parent padding is p-4
-export const HeroSection = ({ say }) => {
+import { HeroImage } from "../flowers";
+export const Hero = ({ say }) => {
   return (
     <>
       <div className="grid md:grid-cols-2 ">
